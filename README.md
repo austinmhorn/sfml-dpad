@@ -3,8 +3,12 @@
 
 Compile Source Files:
 
-    make
+    cmake -S . -B build
+
+Build objects and link executable
+
+    cmake --build build --config Release
 
 Run executable
 
-    make run
+    ./sfml-dpad
