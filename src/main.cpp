@@ -1,4 +1,9 @@
-#include "main.hpp"
+#include "DirectionalPad.hpp"
+
+#include <random>
+#include <functional>
+#include <cstdlib>
+#include <cmath>
 
 int main(int argc, const char **argv)
 {
