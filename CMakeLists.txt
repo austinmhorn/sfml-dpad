@@ -5,11 +5,19 @@ project(sfml-dpad LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
 
-include(FetchContent)
-FetchContent_Declare(SFML
-    GIT_REPOSITORY https://github.com/SFML/SFML.git
-    GIT_TAG 2.6.x)
-FetchContent_MakeAvailable(SFML)
+# Find SFML
+find_package(SFML COMPONENTS audio graphics system window network REQUIRED)
+
+if(NOT SFML_FOUND)
+    message("SFML couldn't be located!")
+    message("Fetching SFML repository")
+    include(FetchContent)
+    FetchContent_Declare(
+        SFML
+        GIT_REPOSITORY https://github.com/SFML/SFML.git
+        GIT_TAG 2.6.x)
+    FetchContent_MakeAvailable(SFML)
+endif()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 
