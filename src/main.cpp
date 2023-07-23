@@ -7,7 +7,7 @@
 
 int main(int argc, const char **argv)
 {
-    sf::RenderWindow window(sf::VideoMode(640, 480), "dpad test");
+    sf::RenderWindow window(sf::VideoMode(640, 480), "austinmhorn's sfml-dpad");
     const auto window_size = sf::Vector2f{ window.getSize() };
         
     DPad dpad;
@@ -16,7 +16,6 @@ int main(int argc, const char **argv)
     dpad.setOutlineThickness(2.f);
     dpad.setOutlineColor(sf::Color::White);
     dpad.setPosition({30.f, 380.f});
-    dpad.directable.setRadius({8.f, 8.f});
     
     
     

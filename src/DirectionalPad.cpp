@@ -6,7 +6,7 @@ DirectionalPad::DirectionalPad()
     : m_radius({100.f, 100.f})
     , m_spacing({20.f, 20.f})
     , m_position({0.f, 0.f})
-    , m_directable({16.f, 16.f})
+    , m_directable({8.f, 8.f})
 {
     computeGeometry();
 }
